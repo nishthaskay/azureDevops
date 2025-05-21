@@ -30,3 +30,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'WarFile'
     publishLocation: 'Container'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure service connection'
+    appName: 'nishthazureapp-dqagb7bfdwe8bzbd'
+    package: '$(Build.ArtifactStagingDirectory)/*.war'

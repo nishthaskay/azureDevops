@@ -34,4 +34,4 @@ steps:
   inputs:
     azureSubscription: 'Azure service connection'
     appName: 'nishthazureapp'
-    package: '$(Build.ArtifactStagingDirectory)/*.war'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.war'
